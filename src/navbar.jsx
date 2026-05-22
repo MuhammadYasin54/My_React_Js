@@ -57,6 +57,9 @@ const NavBar=()=> {
             <MDBNavbarItem>
               <MDBNavbarLink> <Link to={"/TodoList"} className='link'>Todo List App</Link></MDBNavbarLink>
             </MDBNavbarItem>
+             <MDBNavbarItem>
+              <MDBNavbarLink> <Link to={"/ImageSlider"} className='link'>Images</Link></MDBNavbarLink>
+            </MDBNavbarItem>
             
           </MDBNavbarNav>
         </MDBCollapse>
