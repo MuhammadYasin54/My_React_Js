@@ -14,10 +14,23 @@ import UserData from "./apiuserdata";
 import Todo from "./Pages/todo/todo";
 import TodoList from "./Pages/todo/todolist";
 import ImageSlider from "./Pages/image/images";
+import Login from "./Pages/Login/login";
+import SignUp from "./Pages/SignUp/signup";
+import PrivateLayout from "./private-layout";
+import PrivateRoute from "./components/private-routes";
 
 const AppRoutes = () => {
     return (
-        <Routes>
+<Routes>
+        <Route element={<Login/>} path="/login"/>
+         <Route element={<SignUp/>} path="/signup"/>
+
+
+        <Route element = {<PrivateRoute>
+            <PrivateLayout/>
+        </PrivateRoute>}
+>
+        
             <Route element={<Home />} path="/" />
             <Route element={<About />} path="/about" />
             <Route element={<Services />} path="/services" />
@@ -31,7 +44,7 @@ const AppRoutes = () => {
             <Route element={<Todo />} path="/todo" />
             <Route element={<TodoList />} path="/todolist" />
             <Route element={<ImageSlider />} path="/ImageSlider" />
-
+</Route>
 
         </Routes>
     )

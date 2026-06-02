@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import {
   MDBContainer,
   MDBNavbar,
@@ -13,6 +14,12 @@ import {
 import "./navbar.css"
 const NavBar=()=> {
   const [openNav, setOpenNav] = useState(false);
+
+  const hanleLogout = ()=>{
+    localStorage.removeItem("token")
+
+    navigate ("/login")
+  }
 
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
@@ -59,6 +66,9 @@ const NavBar=()=> {
             </MDBNavbarItem>
              <MDBNavbarItem>
               <MDBNavbarLink> <Link to={"/ImageSlider"} className='link'>Images</Link></MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink> <Link className='link' onClick={hanleLogout}>Logout</Link></MDBNavbarLink>
             </MDBNavbarItem>
             
           </MDBNavbarNav>

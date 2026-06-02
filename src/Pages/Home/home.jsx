@@ -31,6 +31,7 @@ const Home =()=>{
 return(
 <div>
        <Header screenName="Home"/>
+       <br/><br/><br/>
     <h1>Welcome To Home</h1>
 </div>
 )

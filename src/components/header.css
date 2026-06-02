@@ -1,13 +1,15 @@
-h1 {
+h1, h3, h2 {
     font-family: 'Times New Roman', Times, serif;
     color: goldenrod;
     text-align: center;
 }
 
-#container {
+#container, div {
     height: 6vh;
     width: auto;
-    background-color: lightgreen;
+    
+    text-align: center;
+    
 }
 
 ul {
