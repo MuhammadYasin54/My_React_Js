@@ -16,7 +16,7 @@ const NavBar=()=> {
   const [openNav, setOpenNav] = useState(false);
 
   const hanleLogout = ()=>{
-    localStorage.removeItem("token")
+    localStorage.clear()
 
     navigate ("/login")
   }

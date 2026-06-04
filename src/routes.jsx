@@ -16,7 +16,7 @@ import TodoList from "./Pages/todo/todolist";
 import ImageSlider from "./Pages/image/images";
 import Login from "./Pages/Login/login";
 import SignUp from "./Pages/SignUp/signup";
-import PrivateLayout from "./private-layout";
+
 import PrivateRoute from "./components/private-routes";
 
 const AppRoutes = () => {
@@ -26,10 +26,8 @@ const AppRoutes = () => {
          <Route element={<SignUp/>} path="/signup"/>
 
 
-        <Route element = {<PrivateRoute>
-            <PrivateLayout/>
-        </PrivateRoute>}
->
+        <Route element = {<PrivateRoute/>}>
+         
         
             <Route element={<Home />} path="/" />
             <Route element={<About />} path="/about" />

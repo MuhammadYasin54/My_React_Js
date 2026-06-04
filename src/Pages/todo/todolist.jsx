@@ -55,10 +55,10 @@ const TodoList = () => {
     }
 
     return (
-        <section className="vh-100" style={{ backgroundColor: "#eee" }}>
+        <section className="vh-100" style={{ backgroundColor: "#eee"}}>
             <MDBContainer className="py-5 h-100">
                 <MDBRow className="d-flex justify-content-center align-items-center">
-                    <MDBCol lg="9" xl="7">
+                    <MDBCol lg="9" xl="8">
                         <MDBCard className="rounded-3">
                             <MDBCardBody className="p-4">
                                 <h4 className="text-center my-3 pb-3">My To Do App</h4>
