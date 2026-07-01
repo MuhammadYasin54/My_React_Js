@@ -16,7 +16,7 @@ const NavBar=()=> {
   const [openNav, setOpenNav] = useState(false);
 
   const hanleLogout = ()=>{
-    localStorage.clear()
+    localStorage.removeItem("isLoggedin")
 
     navigate ("/login")
   }
@@ -24,8 +24,10 @@ const NavBar=()=> {
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
+        
         <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
-        <MDBNavbarToggler
+      
+          <MDBNavbarToggler
           type='button'
           aria-expanded='false'
           aria-label='Toggle navigation'
@@ -35,6 +37,7 @@ const NavBar=()=> {
         </MDBNavbarToggler>
         <MDBCollapse navbar open={openNav}>
           <MDBNavbarNav>
+            
             <MDBNavbarItem>
               <MDBNavbarLink>
                <Link to={"/"} className='link'>Home</Link>
@@ -42,6 +45,9 @@ const NavBar=()=> {
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink> <Link to={"/contact"} className='link'>Contact</Link></MDBNavbarLink>
+            </MDBNavbarItem>
+             <MDBNavbarItem>
+              <MDBNavbarLink> <Link to={"/about"} className='link'>About</Link></MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink> <Link to={"/services"} className='link'>Services</Link></MDBNavbarLink>
@@ -68,6 +74,9 @@ const NavBar=()=> {
               <MDBNavbarLink> <Link to={"/ImageSlider"} className='link'>Images</Link></MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
+              <MDBNavbarLink> <Link to={"/custompage"} className='link' >Custom Page</Link></MDBNavbarLink>
+            </MDBNavbarItem>
+             <MDBNavbarItem>
               <MDBNavbarLink> <Link className='link' onClick={hanleLogout}>Logout</Link></MDBNavbarLink>
             </MDBNavbarItem>
             

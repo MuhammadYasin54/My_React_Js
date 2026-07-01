@@ -5,7 +5,7 @@ import Users from "../../utils/dummy";
 
 
 const Home =()=>{
-    const userName = localStorage.getItem("user")
+    const userName = JSON.parse(localStorage.getItem("User"))
 //     const userName = "Muhammad Yasin"
 
 //     const handleTest =()=>{
@@ -34,7 +34,7 @@ return(
        <Header screenName="Home"/>
        <br/><br/><br/>
     <h1>Welcome To Home </h1>
-    <h3>Dear {userName}</h3>
+    <h3>Dear {userName?.name}</h3>
 </div>
 )
 }

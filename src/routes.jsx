@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./Pages/Home/home";
 import About from "./Pages/About/about";
@@ -16,15 +16,17 @@ import TodoList from "./Pages/todo/todolist";
 import ImageSlider from "./Pages/image/images";
 import Login from "./Pages/Login/login";
 import SignUp from "./Pages/SignUp/signup";
-
+import PublicRoute from "./components/public-routes";
 import PrivateRoute from "./components/private-routes";
+import CustomPage from "./Pages/custom/custom";
 
 const AppRoutes = () => {
     return (
 <Routes>
+        <Route element={<PublicRoute/>}>
         <Route element={<Login/>} path="/login"/>
          <Route element={<SignUp/>} path="/signup"/>
-
+</Route>
 
         <Route element = {<PrivateRoute/>}>
          
@@ -42,6 +44,7 @@ const AppRoutes = () => {
             <Route element={<Todo />} path="/todo" />
             <Route element={<TodoList />} path="/todolist" />
             <Route element={<ImageSlider />} path="/ImageSlider" />
+             <Route element={<CustomPage />} path="/custompage" />
 </Route>
 
         </Routes>
