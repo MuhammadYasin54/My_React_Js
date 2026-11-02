@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import image01 from "../../assets/Images/image01.jpg"
-import image02 from "../../assets/Images/image02.jpg"
+import image02 from "../../assets/Images/Image02.jpg"
 import image03 from "../../assets/Images/image03.jpg"
 import image04 from "../../assets/Images/image04.jpg"
 import image05 from "../../assets/Images/image05.jpg"
